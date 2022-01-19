@@ -47,9 +47,10 @@ func (l *Logical) Write(path string, data map[string]interface{}) (*Secret, erro
 
 	organisationSlug := fmt.Sprintf("%v", data["BUILDKITE_ORGANIZATION_SLUG"])
 	agentId := fmt.Sprintf("%v", data["BUILDKITE_AGENT_ID"])
-	pipelineId := fmt.Sprintf("%v", data["BUILDKITE_PIPELINE_SLUG"])
+	pipelineId := fmt.Sprintf("%v", data["BUILDKITE_PIPELINE_ID"])
 
 	re := regexp.MustCompile("^[a-zA-Z0-9-]+$")
+	//fmt.Println("The organisation token is %s", fmt.Sprintf("%v", data["BUILDKITE_ORGANIZATION_SLUG"]))
 	if !re.MatchString(organisationSlug) {
 		return nil, errors.New("organisationSlug is invalid")
 	}
