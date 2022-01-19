@@ -54,7 +54,7 @@ func (l *Logical) Write(path string, data map[string]interface{}) (*Secret, erro
 	if !re.MatchString(organisationSlug) {
 		return nil, errors.New("organisationSlug is invalid")
 	}
-	re = regexp.MustCompile("^\"[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}\"$")
+	re = regexp.MustCompile("^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$")
 
 	if !re.MatchString(agentId) {
 		return nil, errors.New("agentId is invalid")
