@@ -1,3 +1,3 @@
-module github.com/elliotrotenstein/mock_vault
+module github.com/elliotrotenstein/vault_mock
 
 go 1.17
