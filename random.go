@@ -1,6 +1,6 @@
 package vault_mock
 
-func hello() string {
+func Hello() string {
 	return "it works!"
 }
 
