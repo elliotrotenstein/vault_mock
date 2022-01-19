@@ -1,10 +1,10 @@
 package vault_mock
 
-func hello() string {
+func Hello() string {
 	return "it works!"
 }
 
-type please struct {
+type Please struct {
 	name string
 	success bool
 }
