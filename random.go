@@ -41,7 +41,7 @@ func (c *Client) Logical() *Logical {
 }
 
 func (l *Logical) Write(path string, data map[string]interface{}) (*Secret, error) {
-	if path == "" {
+	if path != "auth/bk/login" {
 		return nil, errors.New("path is empty")
 	}
 
